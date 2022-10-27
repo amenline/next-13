@@ -10,7 +10,14 @@ module.exports = {
       screens: {
         xs: '480px',
       },
-      colors: {},
+      colors: {
+        app_primary: '#58AFAF',
+        app_text1: '#777C7C',
+        app_text2: '#4B4B4B',
+        app_bg1: '#F5F9FA',
+        app_bg2: '#EBF2F3',
+        app_notification: '#ED6363',
+      },
       fontFamily: {
         body: ['INTER', 'sans-serif'],
       },

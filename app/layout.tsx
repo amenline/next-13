@@ -1,5 +1,7 @@
 import '../styles/globals.css';
 import { ReactNode } from 'react';
+import TopBar from './topbar';
+import Nav from './nav';
 
 interface Props {
   children: ReactNode;
@@ -13,7 +15,11 @@ const RootLayout = ({ children }: Props) => {
         <meta name='description' content='Visitors Log app' />
         <link rel='icon' href='/favicon.ico' />
       </head>
-      <body className='font-body'>{children}</body>
+      <body className='font-body'>
+        <TopBar />
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 };
