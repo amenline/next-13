@@ -15,10 +15,10 @@ const RootLayout = ({ children }: Props) => {
         <meta name='description' content='Visitors Log app' />
         <link rel='icon' href='/favicon.ico' />
       </head>
-      <body className='font-body'>
+      <body className='font-body bg-app_bg1'>
         <TopBar />
         <Nav />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );

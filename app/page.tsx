@@ -1,5 +1,9 @@
 const Page = () => {
-  return <h1>Dashboard Page!</h1>;
+  return (
+    <div className='p-24'>
+      <h1 className='mb-5'>Dashboard Page!</h1>
+    </div>
+  );
 };
 
 export default Page;
