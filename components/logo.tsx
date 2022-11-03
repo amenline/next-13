@@ -7,6 +7,7 @@ export const Logo = () => {
         viewBox='0 0 25 25'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
+        className='min-w-[75px]'
       >
         <rect width='25' height='25' rx='6.94444' fill='#58AFAF' />
         <path
