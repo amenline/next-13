@@ -18,18 +18,12 @@ module.exports = {
         app_bg1: '#F5F9FA',
         app_bg2: '#EBF2F3',
         app_notification: '#ED6363',
+        app_menu: "96e0e0",
       },
       fontFamily: {
         body: ['INTER', 'sans-serif'],
       },
     },
-  },
-  daisyui: {
-    themes: [
-      {
-        mytheme: {},
-      },
-    ],
   },
   plugins: [require('daisyui')],
 };

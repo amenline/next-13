@@ -2,8 +2,8 @@ export const Logo = () => {
   return (
     <div className='flex items-center'>
       <svg
-        width='75'
-        height='75'
+        width='60'
+        height='60'
         viewBox='0 0 25 25'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
@@ -15,7 +15,7 @@ export const Logo = () => {
           fill='#F5F9FA'
         />
       </svg>
-      <span className='text-5xl text-app_primary ml-2 font-bold'>BetaCare</span>
+      <span className='text-4xl text-app_primary ml-1 font-bold'>BetaCare</span>
     </div>
   );
 };

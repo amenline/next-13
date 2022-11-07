@@ -1,8 +1,18 @@
+import { NavItem } from '../components';
+import { User } from '../types';
+import TopBar from './topbar';
+
 const Page = () => {
+  const user: User = {
+    fullname: 'Alicia Keys',
+    email: 'alicia@krucialkeys.com',
+  };
+
   return (
-    <div className='p-24'>
-      <h1 className='mb-5'>Dashboard Page!</h1>
-    </div>
+    <>
+      <TopBar user={user} />
+      Dashboard contents
+    </>
   );
 };
 

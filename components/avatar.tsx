@@ -1,12 +1,12 @@
 import Image from 'next/image';
 
 interface Props {
-  imagesrc: string;
+  imagesrc?: string;
   letter: string;
 }
 
 export const Avatar = ({ imagesrc, letter }: Props) => {
-  if (imagesrc !== '') {
+  if (imagesrc !== undefined) {
     return (
       <div className='avatar'>
         <div className='w-24 rounded-3xl bg-black object-contain'>
@@ -17,7 +17,7 @@ export const Avatar = ({ imagesrc, letter }: Props) => {
   } else {
     return (
       <div className='avatar placeholder'>
-        <div className='bg-app_primary text-white font-bold rounded-3xl w-24'>
+        <div className='bg-app_primary text-white font-bold rounded-3xl w-16'>
           <span className='text-3xl'>{letter}</span>
         </div>
       </div>
