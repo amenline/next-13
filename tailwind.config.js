@@ -18,7 +18,7 @@ module.exports = {
         app_bg1: '#F5F9FA',
         app_bg2: '#EBF2F3',
         app_notification: '#ED6363',
-        app_menu: "96e0e0",
+        app_menu: '#a7cfcf',
       },
       fontFamily: {
         body: ['INTER', 'sans-serif'],

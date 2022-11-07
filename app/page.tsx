@@ -11,7 +11,9 @@ const Page = () => {
   return (
     <>
       <TopBar user={user} />
-      Dashboard contents
+      <div className='p-2 bg-app_bg2'>
+        <div className='grow'>Dashboard contents</div>
+      </div>
     </>
   );
 };

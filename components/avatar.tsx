@@ -17,7 +17,7 @@ export const Avatar = ({ imagesrc, letter }: Props) => {
   } else {
     return (
       <div className='avatar placeholder'>
-        <div className='bg-app_primary text-white font-bold rounded-3xl w-16'>
+        <div className='bg-app_primary text-white font-bold rounded-2xl w-16'>
           <span className='text-3xl'>{letter}</span>
         </div>
       </div>

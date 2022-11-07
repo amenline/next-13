@@ -20,7 +20,7 @@ const Input: ForwardRefRenderFunction<HTMLInputElement, Props> = (
         <input
           type='text'
           id={name}
-          className='bg-white border border-app_primary text-gray-900 text-lg focus:ring-blue-500 focus:border-app_primary block w-full pl-3 p-2.5 rounded-2xl'
+          className='bg-white border border-app_primary text-gray-900 text-sm focus:ring-blue-500 focus:border-app_primary block w-full pl-3 p-2.5 rounded-2xl'
           placeholder='Search something here...'
           {...otherProps}
         />

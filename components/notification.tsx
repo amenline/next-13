@@ -7,7 +7,7 @@ interface Props {
 const BellIcon = ({ classes = '' }: { classes?: string }) => (
   <button
     // className={`bg-white p-4 w-fit rounded-3xl border-app_primary border border-solid ${classes}`}
-    className={`btn bg-white h-fit p-4 w-fit rounded-3xl border-app_primary border border-solid ${classes}`}
+    className={`btn bg-white h-fit p-2 w-fit rounded-2xl border-app_primary border border-solid ${classes}`}
   >
     <svg
       xmlns='http://www.w3.org/2000/svg'

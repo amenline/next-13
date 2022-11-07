@@ -27,20 +27,21 @@ const TopBar = ({ user }: Props) => {
           />
         </svg>
       </label>
-      <div className='grow' />
+      <div className='grow lg:hidden' />
       <div className='lg:hidden'>
         <Logo />
       </div>
       <div className='hidden lg:block'>
-        <h1>Hi, {user.fullname}</h1>
+        <h1 className='text-app_text2 text-lg'>Hi, {user.fullname}</h1>
       </div>
+      <div className='hidden lg:block grow' />
       <div className='hidden lg:block'>
         <SearchInput />
       </div>
-      <div className='hidden lg:block'>
+      <div className='hidden lg:block ml-5'>
         <Notification />
       </div>
-      <div className='hidden lg:block'>
+      <div className='hidden lg:block ml-5'>
         <Profile user={user} />
       </div>
       <div className='dropdown dropdown-end lg:hidden'>
@@ -63,7 +64,7 @@ const TopBar = ({ user }: Props) => {
         </label>
         <ul
           tabIndex={0}
-          className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-gray-400 rounded-box w-52 text-white'
+          className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-app_menu rounded-box w-52 text-app_text2'
         >
           <li>
             <span>Profile</span>
