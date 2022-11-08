@@ -6,3 +6,4 @@ export * from './navItem';
 export * from './notification';
 export * from './profile';
 export * from './searchInput';
+export * from './loader';
