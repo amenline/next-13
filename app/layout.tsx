@@ -1,19 +1,11 @@
 import './globals.css';
 import { ReactNode } from 'react';
 import Nav from './nav';
-import TopBar from './topbar';
-import { User } from '../types';
-
 interface Props {
   children: ReactNode;
 }
 
 const RootLayout = ({ children }: Props) => {
-  const user: User = {
-    fullname: 'Alicia Keys',
-    email: 'alicia@krucialkeys.com',
-  };
-
   return (
     <html lang='en'>
       <head>
@@ -26,12 +18,9 @@ const RootLayout = ({ children }: Props) => {
       <body className='font-body bg-app_bg1'>
         <div className='drawer drawer-mobile'>
           <input id='my-drawer-2' type='checkbox' className='drawer-toggle' />
-          <div className='drawer-content min-h-screen bg-app_bg2'>
-            <header className='bg-app_bg1'>
-              <TopBar user={user} />
-            </header>
-            <main className='rounded-tl-3xl p-2 pl-4'>{children}</main>
-          </div>
+          <main className='drawer-content min-h-screen bg-app_bg2'>
+            {children}
+          </main>
           <Nav />
         </div>
       </body>

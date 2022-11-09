@@ -2,7 +2,7 @@ import { EllipsisLoader } from '../components';
 
 const Loading = () => {
   return (
-    <div className='flex h-4/5 items-center justify-center'>
+    <div className='flex min-h-screen items-center justify-center'>
       <EllipsisLoader color='#58AFAF' />
     </div>
   );

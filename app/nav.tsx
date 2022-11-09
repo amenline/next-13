@@ -6,10 +6,10 @@ import {
   HomeIcon,
   Logo,
   LogoutIcon,
-  MembersIcon,
+  PatientsIcon,
   NavItem,
   SettingsIcon,
-  VisitorsIcon,
+  VisitsIcon,
 } from '../components';
 
 const Nav = () => {
@@ -28,17 +28,16 @@ const Nav = () => {
           selected={pathname == '/'}
         />
         <NavItem
-          title='Members'
-          icon={<MembersIcon />}
-          link='/members'
-          selected={pathname == '/members'}
+          title='Patients'
+          icon={<PatientsIcon />}
+          link='/patients'
+          selected={pathname == '/patients'}
         />
         <NavItem
-          title='Visitors'
-          icon={<VisitorsIcon />}
-          link='/visitors'
-          alertIndicator={3}
-          selected={pathname == '/visitors'}
+          title='Visits'
+          icon={<VisitsIcon />}
+          link='/visits'
+          selected={pathname == '/visits'}
         />
         <div className='flex grow'></div>
         <hr className='border-gray-400 mb-2' />

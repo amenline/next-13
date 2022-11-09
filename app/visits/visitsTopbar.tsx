@@ -1,11 +1,11 @@
-import { Logo, Notification, Profile, SearchInput } from '../components';
-import { User } from '../types';
+import { Logo, ProfilePicWithDropdown, SearchInput } from '../../components';
+import { User } from '../../types';
 
 interface Props {
   user: User;
 }
 
-const TopBar = ({ user }: Props) => {
+const VisitsTopbar = ({ user }: Props) => {
   return (
     <div className='flex py-2 px-4 items-center'>
       <label
@@ -38,11 +38,26 @@ const TopBar = ({ user }: Props) => {
       <div className='hidden lg:block'>
         <SearchInput />
       </div>
-      {/* <div className='hidden lg:block ml-5'>
-        <Notification />
-      </div> */}
       <div className='hidden lg:block ml-5'>
-        <Profile user={user} />
+        <ProfilePicWithDropdown user={user}>
+          <ul
+            tabIndex={0}
+            className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52'
+          >
+            <li>
+              <a className='justify-between'>
+                Profile
+                <span className='badge'>New</span>
+              </a>
+            </li>
+            <li>
+              <a>Settings</a>
+            </li>
+            <li>
+              <a>Logout</a>
+            </li>
+          </ul>
+        </ProfilePicWithDropdown>
       </div>
       <div className='dropdown dropdown-end lg:hidden'>
         <label tabIndex={0} className='btn btn-ghost btn-circle'>
@@ -81,4 +96,4 @@ const TopBar = ({ user }: Props) => {
   );
 };
 
-export default TopBar;
+export default VisitsTopbar;

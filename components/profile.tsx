@@ -1,11 +1,15 @@
 import { User } from '../types';
-import { Avatar } from './avatar';
+import { Avatar, AvatarWithLabel } from './avatar';
 
-interface Props {
+interface ProfileProps {
   user: User;
 }
 
-export const Profile = ({ user }: Props) => {
+interface PicOnlyProfileProps extends ProfileProps {
+  children: React.ReactNode;
+}
+
+export const Profile = ({ user }: ProfileProps) => {
   const { picture, fullname, email } = user;
 
   return (
@@ -17,6 +21,23 @@ export const Profile = ({ user }: Props) => {
         </div>
         <div className='text-app_text1 text-sm'>{email && email}</div>
       </div>
+    </div>
+  );
+};
+
+export const ProfilePicWithDropdown = ({
+  user,
+  children,
+}: PicOnlyProfileProps) => {
+  const { picture, fullname, email } = user;
+
+  return (
+    <div className='dropdown dropdown-end'>
+      <AvatarWithLabel
+        imagesrc={picture}
+        letter={fullname ? fullname[0] : ''}
+      />
+      {children}
     </div>
   );
 };

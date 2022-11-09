@@ -1,5 +1,5 @@
-import { User } from '../types';
-import TopBar from './topbar';
+import { User } from '../../types';
+import VisitsTopbar from './visitsTopbar';
 
 const Page = () => {
   const user: User = {
@@ -10,11 +10,9 @@ const Page = () => {
   return (
     <>
       <header className='bg-app_bg1'>
-        <TopBar user={user} />
+        <VisitsTopbar user={user} />
       </header>
-      <div className='p-2 pl-4'>
-        <div>Dashboard contents</div>
-      </div>
+      <div className='p-2 pl-4'>This is the Visits Page</div>
     </>
   );
 };

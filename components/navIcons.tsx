@@ -10,7 +10,7 @@ export const HomeIcon = () => (
   </svg>
 );
 
-export const MembersIcon = () => (
+export const PatientsIcon = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
@@ -21,7 +21,7 @@ export const MembersIcon = () => (
   </svg>
 );
 
-export const VisitorsIcon = () => (
+export const VisitsIcon = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
