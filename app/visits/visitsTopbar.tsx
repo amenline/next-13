@@ -1,4 +1,17 @@
-import { Logo, ProfilePicWithDropdown, SearchInput } from '../../components';
+import {
+  CheckCircleIcon,
+  CheckIcon,
+  CircleIconButton,
+  DropDownList,
+  Logo,
+  LogoutIcon,
+  OutlinedSettingsIcon,
+  PlusIcon,
+  ProfileIcon,
+  ProfilePicWithDropdown,
+  SearchInput,
+  SecondaryBtn,
+} from '../../components';
 import { User } from '../../types';
 
 interface Props {
@@ -28,69 +41,79 @@ const VisitsTopbar = ({ user }: Props) => {
         </svg>
       </label>
       <div className='grow lg:hidden' />
-      <div className='lg:hidden'>
-        <Logo />
-      </div>
       <div className='hidden lg:block'>
-        <h1 className='text-app_text2 text-lg'>Hi, {user.fullname}</h1>
+        <h1 className='text-app_text2 text-lg'>Record Visitors</h1>
       </div>
       <div className='hidden lg:block grow' />
-      <div className='hidden lg:block'>
+      <div className='hidden lg:flex'>
         <SearchInput />
-      </div>
-      <div className='hidden lg:block ml-5'>
-        <ProfilePicWithDropdown user={user}>
-          <ul
-            tabIndex={0}
-            className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52'
-          >
+        <SecondaryBtn
+          classes='normal-case ml-3 border-app_primary bg-white hover:bg-app_bg2'
+          text='Visitors for today'
+          dropdownClases='dropdown-end'
+          icon={<CheckCircleIcon />}
+        >
+          <DropDownList>
             <li>
-              <a className='justify-between'>
-                Profile
-                <span className='badge'>New</span>
+              <a>
+                <span className={``}>
+                  <CheckIcon />
+                </span>
+                <span className='ml-1'>Today</span>
               </a>
             </li>
             <li>
-              <a>Settings</a>
+              <a>
+                <span className={`invisible`}>
+                  <CheckIcon />
+                </span>
+                <span className='ml-1'>Yesterday</span>
+              </a>
             </li>
             <li>
-              <a>Logout</a>
+              <a>
+                <span className={`invisible`}>
+                  <CheckIcon />
+                </span>
+                <span className='ml-1'>Select date</span>
+              </a>
             </li>
-          </ul>
-        </ProfilePicWithDropdown>
+          </DropDownList>
+        </SecondaryBtn>
+        <CircleIconButton
+          classes='ml-3 border-app_primary bg-white hover:bg-app_bg2'
+          icon={<PlusIcon />}
+        />
       </div>
-      <div className='dropdown dropdown-end lg:hidden'>
-        <label tabIndex={0} className='btn btn-ghost btn-circle'>
-          <button className='btn btn-square btn-ghost'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
-              className='inline-block w-5 h-5 stroke-current'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth='2'
-                d='M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z'
-              ></path>
-            </svg>
-          </button>
-        </label>
-        <ul
-          tabIndex={0}
-          className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-app_menu rounded-box w-52 text-app_text2'
-        >
-          <li>
-            <span>Profile</span>
-          </li>
-          <li>
-            <span>Settings</span>
-          </li>
-          <li>
-            <span>Logout</span>
-          </li>
-        </ul>
+      <div className='ml-3'>
+        <ProfilePicWithDropdown user={user}>
+          <DropDownList>
+            <li>
+              <a>
+                <span>
+                  <ProfileIcon />
+                </span>
+                <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <span>
+                  <OutlinedSettingsIcon />
+                </span>
+                <span>Settings</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <span>
+                  <LogoutIcon />
+                </span>
+                <span>Logout</span>
+              </a>
+            </li>
+          </DropDownList>
+        </ProfilePicWithDropdown>
       </div>
     </div>
   );
